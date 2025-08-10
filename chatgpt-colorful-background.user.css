@@ -1,0 +1,28 @@
+/* ==UserStyle==
+@name       YinYiBing
+@version    20250810.03.26
+@namespace  https://github.com/yourusername
+==/UserStyle== */
+
+@-moz-document url-prefix("https://chatgpt.com/") {
+  /* ChatGPT 背景 - 超淡多色雾状渐变 */
+  body {
+      background: linear-gradient(
+          135deg,
+          rgba(255, 209, 255, 0.5) 0%,    /* 淡粉紫 */
+          rgba(197, 226, 255, 0.5) 20%,   /* 淡蓝 */
+          rgba(212, 255, 243, 0.5) 40%,   /* 淡青绿 */
+          rgba(255, 251, 213, 0.5) 60%,   /* 淡米黄 */
+          rgba(255, 224, 224, 0.5) 80%,   /* 淡粉 */
+          rgba(255, 209, 255, 0.5) 100%   /* 回到淡粉紫 */
+      ) !important;
+      background-attachment: fixed !important;
+  }
+
+  /* 去掉任何灰度滤镜，保持彩色 */
+  [class*="gradient"], 
+  canvas[class], 
+  div[class*="background"] {
+      filter: none !important;
+  }
+}
